@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Recipe</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 id="welcomeMessage">Hello, </h2>           
+            
+            <form>
+                <input type="text" placeholder=" Search Recipe" class="searchBox">
+                <button type="submit" class="searchBtn">Search</button>
+            </form>
+            <div class="member" id="login-buttons">
+                <form action="logIn.html">
+                    <button type="submit" class="login-btn">Log in</button>
+                  </form>
+                  <form action="newMember.html">
+                    <button type="submit" class="new-member" >New Member</button>
+                  </form>
+            </div>
+            <form action="logout.html">
+                <button onclick="location.href='logout.html'" class="logout-btn" id="logout-btn">Log out</button>
+            </form>
+            
+        </nav>
+    </header>
+    <main>
+            <div class="recipe-container"></div>
+            
+            <form action="logIn.html">
+            <div class="recipe-details" id="myPopup">
+                <button type="button" class="recipe-close-btn">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="50" height="50" fill="url(#pattern0)"/>
+                        <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_46_2" transform="scale(0.0147059)"/>
+                        </pattern>
+                        <image id="image0_46_2" width="50" height="50" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                        </svg>                                      
+                </button>
+                <div class="recipe-details-content"></div>
+            </div>  
+            </form>
+
+    </main>
+
+<script src="js/search.js">
+</script>
+</body>
+</html>

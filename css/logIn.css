@@ -1,0 +1,50 @@
+
+body {    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+   
+    flex-direction: column;}
+  
+  
+  input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+
+  .submitbtn:hover {
+    opacity: 0.8;
+  }
+  
+  .back-btn{
+    color: white;
+    background-color:red;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+  }
+  
+  nav.login-text{
+    background-color: #0d533e;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  @media screen and (max-width: 600px) {
+    header nav {
+      flex-direction: column;
+    }
+    header nav form {
+      width: 80%;
+      margin-top: 20px;
+    }
+  }
